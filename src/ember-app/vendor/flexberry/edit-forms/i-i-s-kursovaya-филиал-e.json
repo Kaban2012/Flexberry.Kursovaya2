@@ -1,0 +1,71 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Директор",
+      "projection": "ОтветственныйL",
+      "detailModelName": null
+    },
+    {
+      "master": "модель",
+      "displayAttributeName": "название",
+      "required": true,
+      "relationName": "ВозвратКлиентом.Модель",
+      "projection": "МодельL",
+      "detailModelName": "i-i-s-kursovaya-возврат-клиентом"
+    },
+    {
+      "master": "тип",
+      "displayAttributeName": "название",
+      "required": true,
+      "relationName": "ВозвратКлиентом.Тип",
+      "projection": "ТипL",
+      "detailModelName": "i-i-s-kursovaya-возврат-клиентом"
+    },
+    {
+      "master": "клиент",
+      "displayAttributeName": "фИО",
+      "required": true,
+      "relationName": "ВозвратКлиентом.Клиент",
+      "projection": "КлиентL",
+      "detailModelName": "i-i-s-kursovaya-возврат-клиентом"
+    },
+    {
+      "master": "тип",
+      "displayAttributeName": "название",
+      "required": true,
+      "relationName": "РезервОборуд.Тип",
+      "projection": "ТипL",
+      "detailModelName": "i-i-s-kursovaya-резерв-оборуд"
+    },
+    {
+      "master": "модель",
+      "displayAttributeName": "название",
+      "required": true,
+      "relationName": "РезервОборуд.Модель",
+      "projection": "МодельL",
+      "detailModelName": "i-i-s-kursovaya-резерв-оборуд"
+    },
+    {
+      "master": "администратор",
+      "displayAttributeName": "фИО",
+      "required": true,
+      "relationName": "РезервОборуд.Администратор",
+      "projection": "ПользовательL",
+      "detailModelName": "i-i-s-kursovaya-резерв-оборуд"
+    }
+  ],
+  "external": false,
+  "caption": "Филиал",
+  "name": "IISKursovayaФилиалE",
+  "className": "ФилиалE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-филиал",
+      "modelProjection": "ФилиалE"
+    }
+  ]
+}

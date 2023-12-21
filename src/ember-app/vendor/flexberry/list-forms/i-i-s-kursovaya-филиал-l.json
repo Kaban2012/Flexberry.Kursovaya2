@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kursovaya-филиал-e",
+  "editForm": "i-i-s-kursovaya-филиал-e",
+  "external": false,
+  "caption": "Филиал",
+  "name": "IISKursovayaФилиалL",
+  "className": "ФилиалL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-филиал",
+      "modelProjection": "ФилиалL"
+    }
+  ]
+}

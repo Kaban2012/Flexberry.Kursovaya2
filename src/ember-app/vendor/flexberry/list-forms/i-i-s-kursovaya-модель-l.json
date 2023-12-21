@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kursovaya-модель-e",
+  "editForm": "i-i-s-kursovaya-модель-e",
+  "external": false,
+  "caption": "Модель",
+  "name": "IISKursovayaМодельL",
+  "className": "МодельL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-модель",
+      "modelProjection": "МодельL"
+    }
+  ]
+}

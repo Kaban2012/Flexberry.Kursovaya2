@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kursovaya-ответственный-e",
+  "editForm": "i-i-s-kursovaya-ответственный-e",
+  "external": false,
+  "caption": "Ответственный",
+  "name": "IISKursovayaОтветственныйL",
+  "className": "ОтветственныйL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-ответственный",
+      "modelProjection": "ОтветственныйL"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+﻿{
+  "name": "IISKursovayaФилиал",
+  "modelName": "i-i-s-kursovaya-филиал",
+  "className": "Филиал",
+  "nameSpace": "IIS.Kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "адрес",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "название",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерТелефона",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "рабочаяПочта",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "директор",
+      "relatedTo": "i-i-s-kursovaya-ответственный",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "возвратКлиентом",
+      "relatedTo": "i-i-s-kursovaya-возврат-клиентом",
+      "inverse": "филиал"
+    },
+    {
+      "name": "резервОборуд",
+      "relatedTo": "i-i-s-kursovaya-резерв-оборуд",
+      "inverse": "филиал"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ФилиалE",
+      "modelName": "i-i-s-kursovaya-филиал",
+      "attrs": [
+        {
+          "name": "название",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "рабочаяПочта",
+          "caption": "Рабочая почта",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "номерТелефона",
+          "caption": "Номер телефона",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Директор",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Директор",
+          "name": "директор",
+          "relatedTo": "i-i-s-kursovaya-ответственный",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ВозвратКлиентомE",
+          "caption": "Возврат клиентом",
+          "name": "возвратКлиентом",
+          "relatedTo": "i-i-s-kursovaya-возврат-клиентом",
+          "inverse": null
+        },
+        {
+          "projectionName": "РезервОборудE",
+          "caption": "Резерв оборуд",
+          "name": "резервОборуд",
+          "relatedTo": "i-i-s-kursovaya-резерв-оборуд",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ФилиалL",
+      "modelName": "i-i-s-kursovaya-филиал",
+      "attrs": [
+        {
+          "name": "название",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "рабочаяПочта",
+          "caption": "Рабочая почта",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "номерТелефона",
+          "caption": "Номер телефона",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Директор",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО",
+          "name": "директор",
+          "relatedTo": "i-i-s-kursovaya-ответственный",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

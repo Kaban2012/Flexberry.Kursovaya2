@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Модель",
+  "name": "IISKursovayaМодельE",
+  "className": "МодельE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-модель",
+      "modelProjection": "МодельE"
+    }
+  ]
+}

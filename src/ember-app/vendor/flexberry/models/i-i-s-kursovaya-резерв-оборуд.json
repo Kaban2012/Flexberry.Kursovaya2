@@ -1,0 +1,178 @@
+﻿{
+  "name": "IISKursovayaРезервОборуд",
+  "modelName": "i-i-s-kursovaya-резерв-оборуд",
+  "className": "РезервОборуд",
+  "nameSpace": "IIS.Kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаПередачи",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаПоступления",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "переданоКлиенту",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "серийныйНомер",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "администратор",
+      "relatedTo": "i-i-s-kursovaya-пользователь",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "модель",
+      "relatedTo": "i-i-s-kursovaya-модель",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "тип",
+      "relatedTo": "i-i-s-kursovaya-тип",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "филиал",
+      "relatedTo": "i-i-s-kursovaya-филиал",
+      "inverse": "резервОборуд"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "РезервОборудE",
+      "modelName": "i-i-s-kursovaya-резерв-оборуд",
+      "attrs": [
+        {
+          "name": "датаПоступления",
+          "caption": "Дата поступления",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "переданоКлиенту",
+          "caption": "Передано клиенту",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаПередачи",
+          "caption": "Дата передачи",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "серийныйНомер",
+          "caption": "Серийный номер",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Название",
+          "lookupValueField": "название",
+          "relationName": "Тип",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "название",
+              "caption": "Название",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Тип",
+          "name": "тип",
+          "relatedTo": "i-i-s-kursovaya-тип",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Название",
+          "lookupValueField": "название",
+          "relationName": "Модель",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "название",
+              "caption": "Название",
+              "hidden": true,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "type": "standard",
+          "caption": "Модель",
+          "name": "модель",
+          "relatedTo": "i-i-s-kursovaya-модель",
+          "inverse": null
+        },
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Администратор",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": true,
+              "index": 9
+            }
+          ],
+          "index": 8,
+          "type": "standard",
+          "caption": "Администратор",
+          "name": "администратор",
+          "relatedTo": "i-i-s-kursovaya-пользователь",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

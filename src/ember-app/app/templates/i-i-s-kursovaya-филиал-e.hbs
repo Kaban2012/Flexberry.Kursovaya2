@@ -1,0 +1,113 @@
+<h3 class="ui header">{{t "forms.i-i-s-kursovaya-филиал-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.название
+      class=(if (v-get validationModel "название" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya-филиал-e.название-caption")
+      data-test-i-i-s-kursovaya-филиал-e-название=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "название" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.адрес
+      class=(if (v-get validationModel "адрес" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya-филиал-e.адрес-caption")
+      data-test-i-i-s-kursovaya-филиал-e-адрес=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "адрес" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.рабочаяПочта
+      class=(if (v-get validationModel "рабочаяПочта" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya-филиал-e.рабочаяПочта-caption")
+      data-test-i-i-s-kursovaya-филиал-e-рабочаяПочта=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "рабочаяПочта" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерТелефона
+      class=(if (v-get validationModel "номерТелефона" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya-филиал-e.номерТелефона-caption")
+      data-test-i-i-s-kursovaya-филиал-e-номерТелефона=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерТелефона" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya-филиал-e.директор-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.директор
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="директор"
+      projection="ОтветственныйL"
+      title=(t "forms.i-i-s-kursovaya-филиал-e.директор-caption")
+      readonly=readonly
+      componentName="директорLookup"
+      class=(if (v-get validationModel "директор" "isInvalid") "error")
+      data-test-i-i-s-kursovaya-филиал-e-директор=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "директор" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya-филиал-e.возвратКлиентом-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="возвратКлиентомGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.возвратКлиентом
+      content=model.возвратКлиентом
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "возвратКлиентом" "isInvalid") "error")
+      data-test-i-i-s-kursovaya-филиал-e-возвратКлиентом=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "возвратКлиентом" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya-филиал-e.резервОборуд-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="резервОборудGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.резервОборуд
+      content=model.резервОборуд
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "резервОборуд" "isInvalid") "error")
+      data-test-i-i-s-kursovaya-филиал-e-резервОборуд=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "резервОборуд" "message")}}
+  </div>
+</form>

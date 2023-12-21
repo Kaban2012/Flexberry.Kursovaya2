@@ -1,0 +1,72 @@
+﻿{
+  "applicationCaption": "Kursovaya",
+  "applicationTitle": "Kursovaya",
+  "items": [
+    {
+      "link": null,
+      "menuName": "учет-резервного-оборудования",
+      "caption": "Учет резервного оборудования",
+      "title": "Учет резервного оборудования",
+      "children": [
+        {
+          "link": "i-i-s-kursovaya-филиал-l",
+          "menuName": null,
+          "caption": "Филиал",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочники",
+      "caption": "Справочники",
+      "title": "Справочники",
+      "children": [
+        {
+          "link": "i-i-s-kursovaya-пользователь-l",
+          "menuName": null,
+          "caption": "Пользователь",
+          "title": "Пользователь",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-ответственный-l",
+          "menuName": null,
+          "caption": "Ответственный",
+          "title": "Ответственный",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-модель-l",
+          "menuName": null,
+          "caption": "Модель",
+          "title": "Модель",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-тип-l",
+          "menuName": null,
+          "caption": "Тип",
+          "title": "Тип",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-клиент-l",
+          "menuName": null,
+          "caption": "Клиент",
+          "title": "Клиент",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-ответственный-l",
+          "menuName": null,
+          "caption": "Ответственный",
+          "title": "Ответственный",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
